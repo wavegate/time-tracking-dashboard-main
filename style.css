@@ -1,0 +1,247 @@
+@import url("https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500&display=swap");
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --blue: hsl(246, 80%, 60%);
+  --lightRed1: hsl(15, 100%, 70%);
+  --softBlue: hsl(195, 74%, 62%);
+  --lightRed2: hsl(348, 100%, 68%);
+  --limeGreen: hsl(145, 58%, 55%);
+  --violet: hsl(264, 64%, 52%);
+  --softOrange: hsl(43, 84%, 65%);
+  --veryDarkBlue: hsl(226, 43%, 10%);
+  --darkBlue: hsl(235, 46%, 20%);
+  --desaturatedBlue: hsl(235, 45%, 61%);
+  --paleBlue: hsl(236, 100%, 87%);
+  font-size: 18px;
+  font-family: "Rubik", sans-serif;
+  color: white;
+}
+
+body {
+  background: var(--veryDarkBlue);
+}
+
+main {
+  width: 1110px;
+  height: 520px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  gap: 28px;
+}
+
+main > * {
+  border-radius: 20px;
+}
+
+#heading {
+  grid-area: 1 / 1 / 3 / 2;
+  background: var(--darkBlue);
+  position: relative;
+  padding-top: 380px;
+  display: flex;
+  flex-direction: column;
+  color: var(--paleBlue);
+  font-weight: 400;
+  padding-left: 30px;
+  padding-bottom: 30px;
+  justify-content: space-between;
+}
+
+#innerHeading {
+  position: absolute;
+  background: var(--blue);
+  top: 0px;
+  left: 0px;
+  height: 68%;
+  width: 100%;
+  border-radius: 15px;
+  padding: 30px;
+}
+
+#imageJeremy {
+  width: 80px;
+  border: 3px solid white;
+  border-radius: 50%;
+  display: block;
+  margin-bottom: 45px;
+}
+
+#pretext {
+  color: white;
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+h1 {
+  color: white;
+  font-weight: 300;
+  font-size: 2.2rem;
+}
+
+#work {
+  background: url("images/icon-work.svg") 90% -10% no-repeat, var(--lightRed1);
+}
+
+#play {
+  background: url("images/icon-play.svg") 90% -10% no-repeat, var(--softBlue);
+}
+
+#study {
+  background: url("images/icon-study.svg") 90% -10% no-repeat, var(--lightRed2);
+}
+
+#exercise {
+  background: url("images/icon-exercise.svg") 90% 0% no-repeat, var(--limeGreen);
+}
+
+#social {
+  background: url("images/icon-social.svg") 90% -10% no-repeat, var(--violet);
+}
+
+#selfCare {
+  background: url("images/icon-self-care.svg") 90% -5% no-repeat,
+    var(--softOrange);
+}
+
+.option:hover {
+  cursor: pointer;
+  color: white;
+}
+
+.option.selected {
+  color: white;
+}
+
+.outer {
+  position: relative;
+}
+
+.inner {
+  background: var(--darkBlue);
+  position: absolute;
+  bottom: 0px;
+  height: 82%;
+  border-radius: 15px;
+  padding: 30px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+h2 {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+strong {
+  font-weight: 300;
+  font-size: 3rem;
+  display: block;
+}
+
+.lastWeek {
+  font-weight: 300;
+  font-size: 0.9rem;
+}
+
+.headerRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+}
+
+.ellipsis:hover {
+  cursor: pointer;
+  filter: brightness(0) invert(1);
+}
+
+.outer:hover {
+  cursor: pointer;
+}
+
+.outer:hover > .inner {
+  background: var(--desaturatedBlue);
+}
+
+@media only screen and (max-width: 375px) {
+  :root {
+    font-size: 16px;
+  }
+
+  main {
+    width: 90%;
+    height: auto;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    transform: none;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1.2fr 1fr 1fr 1fr 1fr 1fr 1fr;
+    gap: 24px;
+    margin: 40px auto;
+  }
+
+  #heading {
+    grid-area: auto;
+    padding-top: 130px;
+    padding-right: 30px;
+    flex-direction: row;
+    padding-bottom: 20px;
+  }
+
+  #innerHeading {
+    height: auto;
+    display: flex;
+    align-items: center;
+  }
+
+  #innerHeadingText {
+    margin-left: 15px;
+  }
+
+  .dataRow {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  #imageJeremy {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 0px;
+  }
+
+  #pretext {
+    font-size: 0.8rem;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .inner {
+    height: auto;
+    padding: 20px;
+  }
+
+  strong {
+    font-size: 2rem;
+  }
+
+  .headerRow {
+    margin-bottom: 0px;
+  }
+}
